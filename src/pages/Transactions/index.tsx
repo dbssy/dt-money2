@@ -7,6 +7,7 @@ import {
 } from './styles'
 
 import { TransactionsContext } from '../../contexts/TransactionsContext'
+import { amountFormatter, dateFormatter } from '../../utils/formatter'
 
 import { Header } from '../../components/Header'
 import { Summary } from '../../components/Summary'
@@ -30,11 +31,12 @@ export function Transactions() {
                 <td width="50%">{transaction.description}</td>
                 <td>
                   <PriceHighlight variant={transaction.type}>
-                    {transaction.amount}
+                    {transaction.type === 'outcome' && '- '}
+                    {amountFormatter.format(transaction.amount)}
                   </PriceHighlight>
                 </td>
                 <td>{transaction.category}</td>
-                <td>{transaction.createdAt}</td>
+                <td>{dateFormatter.format(new Date(transaction.createdAt))}</td>
               </tr>
             ))}
           </tbody>
