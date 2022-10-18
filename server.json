@@ -15,6 +15,22 @@
       "category": "Alimentação",
       "amount": 50,
       "createdAt": "2022-10-18T21:28:46.261Z"
+    },
+    {
+      "description": "Curso Figma",
+      "amount": 297,
+      "category": "Educação",
+      "type": "outcome",
+      "createdAt": "2022-10-18T23:05:18.044Z",
+      "id": 3
+    },
+    {
+      "description": "Desenvolvimento de LP",
+      "amount": 5000,
+      "category": "Venda",
+      "type": "income",
+      "createdAt": "2022-10-18T23:14:38.636Z",
+      "id": 4
     }
   ]
 }
